@@ -81,6 +81,7 @@ export default function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
@@ -146,7 +147,6 @@ function FormdAddFriend({ onAddFriend }) {
       image: `${image}?=${id}`,
       balance: 0,
     };
-    console.log(newFriend);
     onAddFriend(newFriend);
     setName("");
     setImage("https://i.pravatar.cc/48");
